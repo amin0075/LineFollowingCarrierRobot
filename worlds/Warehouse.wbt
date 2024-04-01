@@ -1,0 +1,166 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.04100884537329699 0.014271083167597102 -0.9990568606372575 2.472284659766269
+  position 0.5069594800949867 0.4456941371198827 0.07036380861243052
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  translation 0.0742373 0.0833297 0.0922667
+  rotation -0.13153854271820747 0.16034594923245654 0.9782570154843321 0.03341532628717622
+  children [
+    DEF FRONT_LEFT_WHEEL_JOINT HingeJoint {
+      jointParameters HingeJointParameters {
+        position 196.77795223816372
+        axis 0 1 0
+        anchor 0.06 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "front_left_motor"
+        }
+      ]
+      endPoint DEF Wheel Solid {
+        translation 0.059718677185213606 0.060536844297690795 0.002754295679721839
+        rotation -0.41369328002144795 -0.6436963557518165 0.6438267404022038 3.9261675786527857
+        children [
+          DEF Wheel_shap Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        boundingObject USE Wheel_shap
+        physics Physics {
+        }
+        linearVelocity -1.4470568141411374e-11 -4.793879414371307e-13 -1.3993754991522928e-12
+        angularVelocity 1.717696471819289e-10 -5.2509411238770295e-09 2.2629393078969953e-11
+      }
+    }
+    DEF BACK_LEFT_WHEEL_JOINT HingeJoint {
+      jointParameters HingeJointParameters {
+        position 87.01568698601338
+        axis 0 1 0
+        anchor -0.06 0.06 0
+      }
+      device [
+        DEF back_left_motor RotationalMotor {
+          name "back_left_motor"
+        }
+      ]
+      endPoint DEF Wheel Solid {
+        translation -0.05884183665346966 0.06021483708059175 0.0026703962271582282
+        rotation 0.8091038600224854 -0.41554411816030573 0.4155406473007044 1.7810672373956902
+        children [
+          DEF Wheel_shap Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE Wheel_shap
+        physics Physics {
+        }
+        linearVelocity 6.15887012091941e-11 1.8981747250681952e-12 -2.7122040022759872e-11
+        angularVelocity -7.561971036884329e-10 2.311663353322435e-08 -9.961688646723422e-11
+      }
+    }
+    DEF FRONT_RIGHT_WHEEL_JOINT HingeJoint {
+      jointParameters HingeJointParameters {
+        position 17.656855665788036
+        axis 0 1 0
+        anchor 0.06 -0.06 0
+      }
+      device [
+        DEF frot_right_motor RotationalMotor {
+          name "front_right_motor"
+        }
+      ]
+      endPoint DEF Wheel Solid {
+        translation 0.05694137145428215 -0.05989607644235987 0.0006413845492192992
+        rotation -0.7214031577528406 0.489680488005408 -0.48968408556028814 4.391479683664888
+        children [
+          DEF Wheel_shap Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE Wheel_shap
+        physics Physics {
+        }
+        linearVelocity -3.9601970149922277e-11 -2.0887822024733928e-12 -1.8409517180067265e-10
+        angularVelocity 1.970128187096641e-09 -6.022602434952109e-08 2.5953636634683083e-10
+      }
+    }
+    DEF BACK_RIGHT_WHEEL_JOINT HingeJoint {
+      jointParameters HingeJointParameters {
+        position -82.05488457256486
+        axis 0 1 0
+        anchor -0.06 -0.06 0
+      }
+      device [
+        DEF back_right_motor RotationalMotor {
+          name "back_right_motor"
+        }
+      ]
+      endPoint DEF Wheel Solid {
+        translation -0.062441251566808235 -0.05989360259436166 0.001785198836600848
+        rotation 0.9661072100071836 -0.18253213770928264 0.18253459254457782 1.6052761841102832
+        children [
+          DEF Wheel_shap Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE Wheel_shap
+        physics Physics {
+        }
+        linearVelocity -8.618884370180554e-11 -3.3219589297007575e-12 -1.1661330392471477e-10
+        angularVelocity 1.568003825969888e-09 -4.793327497868872e-08 2.0656162786897737e-10
+      }
+    }
+    DEF MainBody Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.1 0.04
+      }
+    }
+  ]
+  boundingObject USE MainBody
+  controller "Robot_Controller"
+}

@@ -1,0 +1,585 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.4645557794108484 -0.6847133030849413 -0.5615653304776647 2.652245205382368
+  position -0.12629698693261981 2.0853642634387066 0.956213165776858
+  follow "robot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0943951023931957
+  floorSize 4 4
+  floorAppearance NULL
+  wallHeight 0.6
+}
+DEF Environment Pose {
+  children [
+    DEF Room_2 Pose {
+      translation -0.0100075 0 -0.95
+      rotation 0 1 0 6.32196e-06
+      children [
+        Solid {
+          translation 1.64 0.6 -0.4
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+              }
+              geometry Box {
+                size 0.7 0.2 0.7
+              }
+            }
+          ]
+          name "FRONT_WALL(1)"
+        }
+        WoodenBox {
+          translation 1.66 0.12 -0.45
+          name "wooden box(5)"
+          size 0.07 0.07 0.07
+        }
+        WoodenBox {
+          translation 1.64 0.05 -0.48
+          name "wooden box(6)"
+          size 0.07 0.07 0.07
+        }
+        WoodenBox {
+          translation 1.24 0.03 -0.43
+          name "wooden box(4)"
+          size 0.07 0.07 0.07
+          mass 0.005
+        }
+        WoodenBox {
+          translation 1.65 0.05 -0.41
+          name "wooden box(3)"
+          size 0.07 0.07 0.07
+        }
+        DEF Room_wall_right Wall {
+          translation 2 0.35 -0.800002
+          rotation 0 1 0 -1.5707953071795862
+          name "wall(2)"
+          size 0.1 0.7 0.7
+          appearance Roughcast {
+            colorOverride 0 0 0
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+        }
+        DEF Room_wall_left Wall {
+          translation 2 0.35 -2.03933e-06
+          rotation 0 1 0 -1.5707953071795862
+          name "wall(3)"
+          size 0.1 0.7 0.7
+          appearance Roughcast {
+            colorOverride 0 0 0
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+        }
+      ]
+    }
+    DEF Room_1 Pose {
+      translation -1.73 0 1.09466e-05
+      rotation 0 -1 0 1.57079
+      children [
+        Solid {
+          translation 1.25 0.0199833 -0.41
+          rotation 0.7215304648203525 0 0.6923826892233269 2.546820928768422e-16
+          children [
+            DEF stop_point Shape {
+              appearance PBRAppearance {
+                baseColor 1 1 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.01 0.04 0.1
+              }
+            }
+          ]
+          name "stop point"
+          boundingObject USE stop_point
+          physics Physics {
+          }
+        }
+        Solid {
+          translation 1.64 0.6 -0.4
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.7 0.2 0.7
+              }
+            }
+          ]
+          name "FRONT_WALL"
+        }
+        WoodenBox {
+          translation 1.64 0.12 -0.41
+          name "wooden box(2)"
+          size 0.07 0.07 0.07
+        }
+        WoodenBox {
+          translation 1.64 0.05 -0.45
+          name "wooden box(1)"
+          size 0.07 0.07 0.07
+        }
+        WoodenBox {
+          translation 1.63 0.05 -0.38
+          name "wooden box(8)"
+          size 0.07 0.07 0.07
+        }
+        DEF Room_wall_right Wall {
+          translation 2 0.35 -0.800002
+          rotation 0 1 0 -1.5707953071795862
+          name "wall(1)"
+          size 0.1 0.7 0.7
+          appearance Roughcast {
+            colorOverride 0 0 0
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+        }
+        DEF Room_wall_left Wall {
+          translation 2 0.35 -2.03933e-06
+          rotation 0 1 0 -1.5707953071795862
+          name "wall(6)"
+          size 0.1 0.7 0.7
+          appearance Roughcast {
+            colorOverride 0 0 0
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+        }
+      ]
+    }
+    DEF Line_3 Pose {
+      translation -1.28441 0 -1.35267
+      rotation 0 -1 0 2.35619
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+          }
+          geometry Box {
+            size 0.08 0.001 0.1
+          }
+          castShadows FALSE
+        }
+      ]
+    }
+    DEF Line_2 Pose {
+      translation -1.31 0 -0.0600001
+      rotation 0 1 0 -3.1415853071795863
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Box {
+            size 0.08 0.001 2.6
+          }
+          castShadows FALSE
+        }
+      ]
+    }
+    DEF Line_1 Pose {
+      translation -0.04 0 -1.38
+      rotation 0 1 0 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Box {
+            size 0.08 0.001 2.5
+          }
+          castShadows FALSE
+        }
+      ]
+    }
+  ]
+}
+Robot {
+  translation -1.31037 0.0381367 1.06072
+  rotation 0.00023788298801143964 0.9999979496032235 0.002011019898650872 3.13847
+  children [
+    DEF arm HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1.5517723694821943
+        axis -1 0 0
+        anchor 0 0.019 0.019
+      }
+      device [
+        RotationalMotor {
+          name "arm_motor"
+        }
+        PositionSensor {
+          name "arm_ps"
+        }
+      ]
+      endPoint DEF arm Solid {
+        translation 0 0.019 0.019
+        rotation -1 0 0 0.004999999999918854
+        children [
+          Solid {
+            translation 0 0 0.07
+            children [
+              DEF fingers_body Solid {
+                translation 0 0 0.07
+                children [
+                  DEF ds-body-2 Solid {
+                    translation 0 0.06 0
+                    children [
+                      DEF ds-body-2 Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.5 0.5 1
+                          metalness 0
+                        }
+                        geometry Box {
+                          size 0.04 0.05 0.02
+                        }
+                      }
+                    ]
+                    name "solid(2)"
+                    boundingObject USE ds-body-2
+                    physics Physics {
+                    }
+                  }
+                  DEF ds-body-1 Solid {
+                    translation 0 0.09 0.03
+                    rotation 1 0 0 -1.5707953071795862
+                    children [
+                      DEF ds-body-1 Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.5 0.5 1
+                          metalness 0
+                        }
+                        geometry Box {
+                          size 0.04 0.08 0.02
+                        }
+                      }
+                    ]
+                    name "solid(3)"
+                    boundingObject USE ds-body-1
+                    physics Physics {
+                    }
+                  }
+                  DEF grip_ds DistanceSensor {
+                    translation 5.82738e-08 0.08 0.06
+                    rotation -0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
+                    children [
+                      Shape {
+                        appearance PBRAppearance {
+                          baseColor 0 1 1
+                          metalness 0
+                        }
+                        geometry Box {
+                          size 0.01 0.01 0.01
+                        }
+                      }
+                    ]
+                    name "grip_ds"
+                  }
+                  DEF LEFT_GRIP SliderJoint {
+                    jointParameters JointParameters {
+                      position -0.02744453899863267
+                      axis 1 0 0
+                    }
+                    device [
+                      DEF finger1_ps PositionSensor {
+                        name "left_grip_ps"
+                      }
+                      LinearMotor {
+                        name "left_grip_motor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.0745554 0 0.08
+                      children [
+                        DEF GRIP_BODY Shape {
+                          appearance PBRAppearance {
+                            baseColor 0 1 0.443
+                            metalness 0
+                          }
+                          geometry Box {
+                            size 0.004 0.06 0.15
+                          }
+                        }
+                      ]
+                      boundingObject USE GRIP_BODY
+                      physics Physics {
+                      }
+                    }
+                  }
+                  DEF RIGHT_GRIP SliderJoint {
+                    jointParameters JointParameters {
+                      position 0.03010244347596119
+                      axis 1 0 0
+                    }
+                    device [
+                      DEF right_finger_ps PositionSensor {
+                        name "right_grip_ps"
+                      }
+                      LinearMotor {
+                        name "right_grip_motor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation -0.0718975 0 0.08
+                      children [
+                        DEF grip Shape {
+                          appearance PBRAppearance {
+                            baseColor 0 1 0.443
+                            metalness 0
+                          }
+                          geometry Box {
+                            size 0.004 0.06 0.15
+                          }
+                        }
+                      ]
+                      name "solid(1)"
+                      boundingObject USE grip
+                      physics Physics {
+                      }
+                    }
+                  }
+                  DEF figners_body Shape {
+                    appearance PBRAppearance {
+                      baseColor 0 1 0
+                    }
+                    geometry Box {
+                      size 0.15 0.07 0.02
+                    }
+                  }
+                ]
+                name "fingers_body"
+                boundingObject USE figners_body
+                physics Physics {
+                }
+              }
+              DEF arm_shap Shape {
+                appearance PBRAppearance {
+                  baseColor 0 0 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.04 0.02 0.12
+                }
+              }
+            ]
+            name "arm"
+            boundingObject Box {
+              size 0.04 0.02 0.12
+            }
+            physics Physics {
+            }
+          }
+          DEF body Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+            }
+            geometry Box {
+              size 0.04 0.02 0.019
+            }
+          }
+        ]
+        name "arm"
+        boundingObject Box {
+          size 0.04 0.02 0.019
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF Body Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.05 0.2
+      }
+    }
+    DEF Hinge1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2346.0198219593935
+        anchor 0.06 0 0.05
+      }
+      device [
+        DEF Motor1 RotationalMotor {
+          name "m_backRight"
+        }
+      ]
+      endPoint DEF Wheel1 Solid {
+        translation 0.06 0 0.05
+        rotation 0.7097610922475953 0.11402990948833033 0.6951520493198475 2.909783656572386
+        children [
+          DEF Wheel_Shape Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel1"
+        boundingObject USE Wheel_Shape
+        physics Physics {
+        }
+      }
+    }
+    DEF Hinge2 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2346.0200073656442
+        anchor 0.06 0 -0.05
+      }
+      device [
+        DEF Motor2 RotationalMotor {
+          name "m_frontRight"
+        }
+      ]
+      endPoint DEF Wheel2 Solid {
+        translation 0.06 0 -0.05
+        rotation 0.7097651682539914 0.11398019125004737 0.6951560414295384 2.909883825560682
+        children [
+          USE Wheel_Shape
+        ]
+        name "wheel2"
+        boundingObject USE Wheel_Shape
+        physics Physics {
+        }
+      }
+    }
+    DEF Hinge3 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2853.9410944830474
+        anchor -0.06 0 0.05
+      }
+      device [
+        DEF Motor3 RotationalMotor {
+          name "m_backLeft"
+        }
+      ]
+      endPoint DEF Wheel3 Solid {
+        translation -0.06 0 0.05
+        rotation 0.6033795577143782 -0.5135774296274092 0.6100584669600979 4.140013710162124
+        children [
+          USE Wheel_Shape
+        ]
+        name "wheel3"
+        boundingObject USE Wheel_Shape
+        physics Physics {
+        }
+      }
+    }
+    DEF Hinge4 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2853.941072586373
+        anchor -0.06 0 -0.05
+      }
+      device [
+        DEF Motor1 RotationalMotor {
+          name "m_frontLeft"
+        }
+      ]
+      endPoint DEF Wheel4 Solid {
+        translation -0.06 0 -0.05
+        rotation -0.614554520287088 0.48349894201227245 -0.6233390046096268 2.1869402960479403
+        children [
+          USE Wheel_Shape
+        ]
+        name "wheel4"
+        boundingObject USE Wheel_Shape
+        physics Physics {
+        }
+      }
+    }
+    DistanceSensor {
+      translation 0.0265882 -0.02 0.0874862
+      rotation 0.5696987829536352 -0.5696977829540163 -0.5923577743209124 2.07203
+      children [
+        DEF sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "inf_front_left"
+      boundingObject USE sensor
+      physics Physics {
+      }
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.0266081 -0.02 0.0874967
+      rotation -0.5844139659646083 0.5844159659644919 0.5629549672143481 -2.116125307179586
+      children [
+        DEF sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "inf_front_right"
+      boundingObject USE sensor
+      physics Physics {
+      }
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.00299687 -0.01 0.098612
+      rotation -1.7087199999955725e-06 -0.999999999997409 -1.5041899999961027e-06 1.6082
+      children [
+        DEF sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "body_ds"
+      boundingObject USE sensor
+      physics Physics {
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "Robot_Controller"
+}

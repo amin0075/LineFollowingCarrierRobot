@@ -1,0 +1,8 @@
+{
+  "python.testing.unittestArgs": ["-v", "-s", "./tests", "-p", "test_*.py"],
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": true,
+  "python.analysis.extraPaths": [
+    "/Applications/Webots.app/Contents/lib/controller/python"
+  ]
+}
